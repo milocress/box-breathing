@@ -44,7 +44,7 @@
             background-color: #5cb85c;
             width: 0%;
             border-radius: 5px;
-            transition: width 0s linear;
+            transition: width 0.1s linear;
         }
         button {
             background-color: #5cb85c;
@@ -135,7 +135,7 @@
         function animateProgressBar(instruction) {
             clearInterval(progressInterval);
             const progressBar = document.getElementById("progress-bar");
-            const interval = document.getElementById("interval").value * 1000; // adjust the interval to account for rendering time
+            const interval = document.getElementById("interval").value * 1000;
             const totalSteps = 100; // Representing 100% of the bar
             let progressStep = (instruction === instructions.INHALE || instruction === instructions.EXHALE) ? 1 : 0; // 1 or 0 based on Inhale/Exhale
             let currentStep = (instruction === instructions.HOLDFULL || instruction === instructions.EXHALE) ? totalSteps : 0; // Start from 100 if Exhale or holdfull, else 0
